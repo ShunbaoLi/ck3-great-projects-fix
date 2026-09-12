@@ -1,0 +1,13 @@
+﻿l_english:
+ dlc_tgp_grand_canal_region: "Sui-Tang Grand Canal"
+ dlc_tgp_grand_canal_1_region: "Jiangnan Canal"
+ dlc_tgp_grand_canal_2_region: "Shanyang & Huai-Yang Canal"
+ dlc_tgp_grand_canal_3_region: "Tongji Canal (Bian River)"
+ dlc_tgp_grand_canal_4_region: "Yongji Canal (Yu River)"
+
+ great_project_type_grand_canals: "Grand Canal"
+ great_project_type_grand_canals_desc: "First conceived in antiquity and fully realized during the Sui Dynasty, the Grand Canal centered upon the Eastern Capital of Luoyang, reaching north to Zhuojun/Youzhou via the Yongji Canal and south to Hangzhou via the Tongji and Jiangnan Canals. Restoring and expanding this monumental imperial waterway ensures the vital flow of tribute grain and commerce between Jiangnan, Kaifeng, and Luoyang."
+
+ great_project_type_great_wall: "The Great Wall"
+ great_project_type_great_wall_desc: "Stretching across the northern frontier, the Great Wall has long served as a shield protecting the heartland from nomadic incursions. Through decades of wear and changing border dynamics, many sections have fallen into disrepair. By mobilizing imperial treasury and resources to reinforce forts and passes, we shall restore an impenetrable bulwark for the realm."
+ great_project_contribution_master_builder_must_have_funded_province: "At least 1 [province|E] has been funded for improvements, or realm has upgradeable Great Wall sections"

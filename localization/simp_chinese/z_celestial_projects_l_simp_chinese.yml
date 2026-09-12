@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+ dlc_tgp_grand_canal_region: "隋唐大运河"
+ dlc_tgp_grand_canal_1_region: "江南运河"
+ dlc_tgp_grand_canal_2_region: "山阳渎与淮扬段"
+ dlc_tgp_grand_canal_3_region: "通济渠（汴河段）"
+ dlc_tgp_grand_canal_4_region: "永济渠（御河段）"
+
+ great_project_type_grand_canals: "大运河"
+ great_project_type_grand_canals_desc: "大运河始筑于春秋，于隋炀帝大业年间全面贯通，以东都洛阳为中枢，北通涿郡幽州（永济渠），南达余杭杭州（通济渠、山阳渎与江南河）。作为贯通南北水脉的天下之命脉，如今运用新技术疏浚扩建这一庞大的水运体系，将使汴洛与江淮漕运畅通无阻，重现舟楫相望的繁华盛景。"
+
+ great_project_type_great_wall: "万里长城"
+ great_project_type_great_wall_desc: "横贯北疆的长城是阻隔塞外游牧铁骑、屏障中原农耕文明的千年要塞。然而岁月流逝与边事更迭使得诸多段落残破失修。朝廷统筹调配财帛工料，督修各路关隘烽燧，将使边塞防线固若金汤。"
+ great_project_contribution_master_builder_must_have_funded_province: "已有段落获得资助，或领内存在可升级的长城段落"
