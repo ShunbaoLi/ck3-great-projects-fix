@@ -16,7 +16,7 @@
 ## 🇨🇳 中文说明
 
 ### 📌 项目简介
-**CK3 大型工程修复 (CK3 Great Projects Fix)** 旨在系统性修复《十字军之王3》（Crusader Kings III）中各“大型工程”（Great Projects）系统存在的逻辑缺陷、AI 死锁、历史穿帮、作用域错误及性能卡顿等 Bug。
+**CK3 大型工程修复 (CK3 Great Projects Fix)** 旨在系统性修复《十字军之王3》（Crusader Kings III）中各“大型工程”（Great Projects）系统存在的逻辑缺陷、AI 死锁、历史穿帮、作用域错误等 Bug。
 
 本项目起步于针对“万里长城”与“隋唐大运河”的专项修复，现已升级为**面向 CK3 全球所有大型工程的通用修复框架**。欢迎社区玩家与开发者共同发掘 Bug 并贡献修复。
 
@@ -33,8 +33,6 @@
    - 修复玩家或 AI 先行委任主建筑师时，因前置资助判定缺陷导致该选项被永久锁死的 Bug。
 4. **朝廷官员发起工程即时失效 Bug (Invalid Project Owner Scope)**：
    - 修复中央内阁要员（如工部尚书）发起工程时，因直属封地不在边境导致工程被系统判定为无效而立刻作废的 Bug。
-5. **面板展开卡死 Bug (UI Freeze on Map Interaction)**：
-   - 修复点击大地图长城工程图钉展开详情面板时，导致游戏主线程短暂停顿/假死的严重卡顿 Bug。
 
 #### 模块二：隋唐大运河路线修正 (`grand_canals`)
 修复原版大运河区域错套用元明清京杭直线大运河的历史穿帮 Bug，去直取弯，恢复以东都洛阳与东京开封（汴梁）为中枢的唐宋水网：
@@ -53,7 +51,6 @@
 - 逻辑死锁 / 无法推进 / 无法完成
 - 触发条件或发起资格判定 Bug
 - AI 异常行为（无脑发起、空耗国库等）
-- 界面卡顿或性能瓶颈
 - 历史地理考据硬伤
 
 欢迎通过以下方式参与：
@@ -92,7 +89,7 @@
 ## 🌐 English Description
 
 ### 📌 About the Project
-**CK3 Great Projects Fix** is a community fix mod dedicated to resolving logic deadlocks, AI loops, historical errors, scope bugs, and UI freezes across Crusader Kings III's Great Projects system.
+**CK3 Great Projects Fix** is a community fix mod dedicated to resolving logic deadlocks, AI loops, historical errors, and scope bugs across Crusader Kings III's Great Projects system.
 
 Initially created for the Great Wall and Grand Canal, the project is now a **universal framework for repairing and improving all Great Projects across CK3 worldwide**. Contributions and bug reports are warmly welcome!
 
@@ -109,8 +106,6 @@ Initially created for the Great Wall and Grand Canal, the project is now a **uni
    - Fixed a dependency bug where appointing the Master Builder before funding a section permanently locked the appointment.
 4. **Premature Project Invalidation for Imperial Officials**:
    - Fixed a scope bug where projects initiated by court ministers were immediately aborted by the engine because their personal holding was outside the border counties.
-5. **UI Freeze on Panel Open**:
-   - Fixed an engine hitching bug that caused severe UI lag and multi-second game freezes when opening the Great Wall map pin panel.
 
 #### Module 2: The Sui-Tang Grand Canal Route (`grand_canals`)
 Fixed historical routing anachronisms where the canal erroneously used the post-Yuan straight alignment instead of the curved Tang-Song network centered on Luoyang and Kaifeng:
@@ -125,7 +120,7 @@ Fixed historical routing anachronisms where the canal erroneously used the post-
 
 **This project welcomes bug reports and fixes for ALL Great Projects worldwide!**
 
-If you encounter any logic deadlocks, progression bugs, AI quirks, UI freezes, or historical inaccuracies in any vanilla or DLC Great Projects (such as the Pyramids, Hagia Sophia, Colosseum, Angkor Wat, Grand Canals, Great Wall, etc.):
+If you encounter any logic deadlocks, progression bugs, AI quirks, or historical inaccuracies in any vanilla or DLC Great Projects (such as the Pyramids, Hagia Sophia, Colosseum, Angkor Wat, Grand Canals, Great Wall, etc.):
 
 - **Report an Issue**: Open a ticket at [GitHub Issues](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) with reproduction details and savegame/screenshots.
 - **Submit a Pull Request**:
