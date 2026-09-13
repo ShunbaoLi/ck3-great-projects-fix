@@ -29,8 +29,6 @@ Initially created for the Great Wall and Grand Canal in East Asia, this project 
 | :--- | :--- | :--- | :--- | :---: |
 | **The Great Wall** (万里长城) | `great_wall` | Frontier China | Fixed AI initiation deadlock, 35 section scope failures under bureaucracy, Master Builder lock, invalid owner scopes | [📖 View Details](docs/great_wall.en.md) |
 | **The Grand Canal** (隋唐大运河) | `grand_canals` | Central Plain / Jiangnan | Replaced straight post-Yuan alignment with authentic Tang-Song curved network through Luoyang & Kaifeng (23 counties) | [📖 View Details](docs/grand_canals.en.md) |
-| **Hagia Sophia** (圣索菲亚大教堂) | `hagia_sophia` | Byzantine Empire | *(Planned / Open for community claim)* | [Claim Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
-| **The Pyramids** (埃及金字塔) | `pyramids` | Egypt / Middle East | *(Planned / Open for community claim)* | [Claim Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
 
 ---
 

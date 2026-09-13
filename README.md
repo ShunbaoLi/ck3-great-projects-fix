@@ -29,8 +29,6 @@
 | :--- | :--- | :--- | :--- | :---: |
 | **万里长城** (The Great Wall) | `great_wall` | 塞北 / 中华天朝 | 修复 AI 无脑发起死锁、35 处段落官僚制归属失效、主建筑师死锁、官员发起即刻作废 | [📖 查阅详情](docs/great_wall.md) |
 | **隋唐大运河** (The Grand Canal) | `grand_canals` | 中原 / 江淮 | 纠正明清直线京杭线穿帮，还原以洛阳、开封为中枢的唐宋真实水运漕网（23 个伯爵领） | [📖 查阅详情](docs/grand_canals.md) |
-| **圣索菲亚大教堂** (Hagia Sophia) | `hagia_sophia` | 拜占庭帝国 | *(待认领 / 欢迎社区反馈)* | [认领 Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
-| **埃及金字塔** (The Pyramids) | `pyramids` | 埃及 / 中东 | *(待认领 / 欢迎社区反馈)* | [认领 Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
 
 ---
 
