@@ -1,10 +1,10 @@
-version="1.1"
+version="1.2"
 tags={
 	"Historical"
 	"Fixes"
 	"Map"
 }
-name="天朝大型工程修复 (Celestial Great Projects Fix)"
+name="CK3 大型工程修复 (CK3 Great Projects Fix)"
 picture="thumbnail.png"
 supported_version="1.19.0.6"
 remote_file_id="3799596844"
