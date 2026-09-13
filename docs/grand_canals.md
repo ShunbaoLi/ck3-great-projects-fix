@@ -4,27 +4,50 @@
 
 ---
 
-## 📌 历史背景与修正缘由
-在《十字军之王3》（CK3）中，“大运河”（`grand_canals`）被赋予给中原文明。然而原版游戏直接套用了**元明清时期开凿的京杭直线大运河**：
-- 原版路线强行穿过鲁西的曹州、单州、濮州与徐州，径直北上。
-- **历史严重穿帮**：在唐宋中世纪时期，黄淮运河体系（通济渠）必须沿汴水溯流而上，**东都洛阳**与**东京开封（汴梁）**才是天下漕运的真正心脏！
-
-本 Mod 彻底去直取弯，还原了以洛阳与开封为核心枢纽的隋唐宋真实水运漕网。
+## 📌 修改范围
+- **地理区域定义**：`map_data/geographical_regions/geographical_region.txt`
+- **本地化文本**：`localization/simp_chinese/z_celestial_projects_l_simp_chinese.yml` 与 `localization/english/z_celestial_projects_l_english.yml`
 
 ---
 
-## 🗺️ 四大渠段伯爵领修正全览
-
-原版在 `map_data/geographical_regions/geographical_region.txt` 中划分了 4 个运河地理区域。本 Mod 对其包含的伯爵领（Counties）进行了精准历史重构：
-
-| 游戏分段 ID | 历史渠名 | 修正后包含的伯爵领 (Counties) | 历史水系考据说明 |
-| :--- | :--- | :--- | :--- |
-| **`dlc_tgp_grand_canal_1_region`** | **江南运河**<br>（浙东与江南水网） | 明州（宁波）、越州（绍兴）、杭州、秀州（嘉兴）、苏州 | 大运河南端总起点（余杭），连通太湖平原与浙东运河。 |
-| **`dlc_tgp_grand_canal_2_region`** | **山阳渎**<br>（淮扬与渡江段） | 常州、润州（镇江）、扬州、楚州（淮安）、泗州 | 自常州、润州渡长江入江都（扬州），经古山阳渎北上入淮，汇聚于淮河重镇泗州。 |
-| **`dlc_tgp_grand_canal_3_region`** | **通济渠（汴河段）**<br>（中原漕运总命脉） | **宿州、宋州（商丘）、汴州（开封）、郑州、河南府（洛阳）** | **【核心修正】** 彻底剔除原版无关的徐、单、曹、濮。<br>自泗州沿汴水溯流而上，经宿州、宋州直抵**东京汴梁（开封）**，再经郑州抵达**东都洛阳**！ |
-| **`dlc_tgp_grand_canal_4_region`** | **永济渠（御河段）**<br>（洛北直通涿郡幽州） | **怀州（河阳）、卫州（汲县）、相州（安阳）**、魏州、贝州、德州、沧州、幽州（北京） | **【核心修正】** 补全洛阳北岸沁水河口引水段（怀州、卫州、相州），沿太行山东麓经魏博直抵大运河北端终点幽州。 |
+## 🔍 原版缺陷 (Issue)
+原版中“大运河”（`grand_canals`）相关的地理区域判定（`dlc_tgp_grand_canal_region`）错误采用了元明清时期的京杭直线运河走向：
+1. **通济渠段缺失核心中枢**：原版 `dlc_tgp_grand_canal_3_region` 直接穿越鲁西四州，完全绕过了唐宋时期的中原漕运核心——河南府（东都洛阳）与汴州（东京开封）。
+2. **永济渠段断头**：原版 `dlc_tgp_grand_canal_4_region` 缺少洛北黄河/沁水引水渠段，导致运河北段与中原水网脱节。
 
 ---
 
-## 🏛️ 配套文本本地化
-修改涵盖中文与英文本地化文件（`localization/`），修正了游戏内渠段名称与大运河描述文本，展现隋炀帝大业年间开皇之盛与汴洛漕运之繁华。
+## 🛠️ 伯爵领改动明细 (County Changes)
+
+### 1. `dlc_tgp_grand_canal_3_region`（通济渠 / 汴河段）
+- **移出伯爵领**：`c_xuzhou`（徐州）、`c_danzhou`（单州）、`c_caozhou`（曹州）、`c_puzhou`（濮州）
+- **新增伯爵领**：
+  - `c_suzhou`（宿州）
+  - `c_songzhou`（宋州 / 商丘）
+  - `c_bianzhou`（汴州 / 开封）
+  - `c_zhengzhou`（郑州）
+  - `c_henan`（河南府 / 洛阳）
+
+### 2. `dlc_tgp_grand_canal_4_region`（永济渠 / 御河段）
+- **新增伯爵领**（补全引水段）：
+  - `c_huaizhou`（怀州 / 河阳）
+  - `c_weizhou_1`（卫州 / 汲县）
+  - `c_xiangzhou`（相州 / 安阳）
+- **保留伯爵领**：`c_weizhou`（魏州）、`c_beizhou`（贝州）、`c_dezhou`（德州）、`c_cangzhou`（沧州）、`c_youzhou`（幽州 / 北京）
+
+### 3. `dlc_tgp_grand_canal_1_region`（江南运河段）
+- **涵盖伯爵领**：`c_mingzhou_1`（明州）、`c_yuezhou`（越州）、`c_hangzhou`（杭州）、`c_xiuzhou`（秀州）、`c_suzhou_2`（苏州）
+
+### 4. `dlc_tgp_grand_canal_2_region`（山阳渎 / 淮扬段）
+- **涵盖伯爵领**：`c_changzhou`（常州）、`c_runzhou`（润州）、`c_yangzhou`（扬州）、`c_chuzhou_1`（楚州）、`c_sizhou_2`（泗州）
+
+---
+
+## 🏛️ 本地化覆盖 (Localization)
+同步覆盖并修正以下本地化键值，使其与唐宋历史渠名及路线一致：
+- `dlc_tgp_grand_canal_region`: "隋唐大运河"
+- `dlc_tgp_grand_canal_1_region`: "江南运河"
+- `dlc_tgp_grand_canal_2_region`: "山阳渎与淮扬段"
+- `dlc_tgp_grand_canal_3_region`: "通济渠（汴河段）"
+- `dlc_tgp_grand_canal_4_region`: "永济渠（御河段）"
+- `great_project_type_grand_canals_desc`: 更新大运河历史描述文本

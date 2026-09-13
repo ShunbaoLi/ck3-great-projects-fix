@@ -4,27 +4,50 @@
 
 ---
 
-## 📌 Historical Context & Overview
-In Crusader Kings III, the Grand Canal (`grand_canals`) represents China's vital inland waterways. However, vanilla CK3 mistakenly routed the canal based on the **post-Yuan/Ming dynasty straight Beijing-Hangzhou canal**:
-- The vanilla route forced the canal straight through western Shandong counties (Caozhou, Shanzhou, Puzhou, and Xuzhou).
-- **Severe Historical Anachronism**: In medieval Tang and Song China, the canal followed the Bian River upstream, with **Luoyang (Eastern Capital)** and **Kaifeng (Bianjing)** serving as the absolute economic and transport heart of the empire!
-
-This overhaul replaces the straight post-medieval alignment with the authentic Sui-Tang curved waterway network centered on Luoyang and Kaifeng.
+## 📌 Scope of Changes
+- **Geographical Regions**: `map_data/geographical_regions/geographical_region.txt`
+- **Localization Files**: `localization/simp_chinese/z_celestial_projects_l_simp_chinese.yml` and `localization/english/z_celestial_projects_l_english.yml`
 
 ---
 
-## 🗺️ County Breakdown Across Four Canal Sections
-
-The 4 canal regions defined in `map_data/geographical_regions/geographical_region.txt` have been corrected as follows:
-
-| Region ID | Historical Section | Included Counties | Historical Rationale |
-| :--- | :--- | :--- | :--- |
-| **`dlc_tgp_grand_canal_1_region`** | **Jiangnan Canal** | Mingzhou (Ningbo), Yuezhou (Shaoxing), Hangzhou, Xiuzhou (Jiaxing), Suzhou | The southern terminus (Hangzhou), connecting Lake Tai plain with eastern Zhejiang. |
-| **`dlc_tgp_grand_canal_2_region`** | **Shanyang Channel** | Changzhou, Runzhou (Zhenjiang), Yangzhou, Chuzhou (Huai'an), Sizhou | Crosses the Yangtze from Zhenjiang to Yangzhou, following the ancient Shanyang channel to the Huai River at Sizhou. |
-| **`dlc_tgp_grand_canal_3_region`** | **Tongji Canal (Bian River)** | **Suzhou (Anhui), Songzhou (Shangqiu), Bianzhou (Kaifeng), Zhengzhou, Henan Fu (Luoyang)** | **【Core Fix】** Stripped irrelevant western Shandong counties.<br>Follows the Bian River upstream through Kaifeng directly to **Luoyang**! |
-| **`dlc_tgp_grand_canal_4_region`** | **Yongji Canal (Yu River)** | **Huaizhou (Heyang), Weizhou, Xiangzhou (Anyang)**, Weizhou (Hebei), Beizhou, Dezhou, Cangzhou, Youzhou (Beijing) | **【Core Fix】** Restored northern intake sections along the Qin River (Huaizhou, Weizhou, Xiangzhou) leading straight north to Youzhou. |
+## 🔍 Vanilla Defects (Issue)
+In vanilla CK3, the geographical regions for the Grand Canal (`grand_canals`) erroneously modeled the post-Yuan/Ming straight canal route instead of the authentic medieval Tang-Song alignment:
+1. **Missing Central Transport Hubs in Section 3**: `dlc_tgp_grand_canal_3_region` routed directly through western Shandong, completely bypassing the historical economic hubs of Luoyang (Eastern Capital) and Kaifeng (Bianjing).
+2. **Broken Northern Intake in Section 4**: `dlc_tgp_grand_canal_4_region` omitted the canal intake counties along the Yellow/Qin River north of Luoyang, disconnecting the northern canal from the central network.
 
 ---
 
-## 🏛️ Localization
-Matching localization updates (in `localization/`) update in-game descriptions and names to reflect authentic Tang-Song historical context.
+## 🛠️ County Changes (Diff by Region)
+
+### 1. `dlc_tgp_grand_canal_3_region` (Tongji Canal / Bian River)
+- **Removed Counties**: `c_xuzhou`, `c_danzhou`, `c_caozhou`, `c_puzhou`
+- **Added Counties**:
+  - `c_suzhou` (Suzhou / Anhui)
+  - `c_songzhou` (Songzhou / Shangqiu)
+  - `c_bianzhou` (Bianzhou / Kaifeng)
+  - `c_zhengzhou` (Zhengzhou)
+  - `c_henan` (Henan Fu / Luoyang)
+
+### 2. `dlc_tgp_grand_canal_4_region` (Yongji Canal / Yu River)
+- **Added Counties** (restoring intake section):
+  - `c_huaizhou` (Huaizhou / Heyang)
+  - `c_weizhou_1` (Weizhou / Jixian)
+  - `c_xiangzhou` (Xiangzhou / Anyang)
+- **Retained Counties**: `c_weizhou`, `c_beizhou`, `c_dezhou`, `c_cangzhou`, `c_youzhou`
+
+### 3. `dlc_tgp_grand_canal_1_region` (Jiangnan Canal)
+- **Counties**: `c_mingzhou_1`, `c_yuezhou`, `c_hangzhou`, `c_xiuzhou`, `c_suzhou_2`
+
+### 4. `dlc_tgp_grand_canal_2_region` (Shanyang Channel)
+- **Counties**: `c_changzhou`, `c_runzhou`, `c_yangzhou`, `c_chuzhou_1`, `c_sizhou_2`
+
+---
+
+## 🏛️ Localization Updates
+Updated the following localization keys to match the historical channel names and descriptions:
+- `dlc_tgp_grand_canal_region`: "Sui-Tang Grand Canal"
+- `dlc_tgp_grand_canal_1_region`: "Jiangnan Canal"
+- `dlc_tgp_grand_canal_2_region`: "Shanyang Channel and Huai-Yang Section"
+- `dlc_tgp_grand_canal_3_region`: "Tongji Canal (Bian River Section)"
+- `dlc_tgp_grand_canal_4_region`: "Yongji Canal (Yu River Section)"
+- `great_project_type_grand_canals_desc`: Updated historical overview text
