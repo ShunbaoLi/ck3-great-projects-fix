@@ -4,10 +4,11 @@
 
 [![Steam Workshop](https://img.shields.io/badge/Steam_Workshop-3799596844-blue.svg?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3799596844)
 [![GitHub](https://img.shields.io/badge/GitHub-ck3--great--projects--fix-181717.svg?logo=github)](https://github.com/ShunbaoLi/ck3-great-projects-fix)
+[![Changelog](https://img.shields.io/badge/Changelog-Keep_a_Changelog-blueviolet.svg)](CHANGELOG.md)
 [![CK3 Version](https://img.shields.io/badge/CK3_Version-1.18%20%7C%201.19+-orange.svg)](https://ck3.paradoxwikis.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**[中文说明](#-中文说明) | [English Description](#-english-description)**
+**[中文说明](#-中文说明) | [English Description](#-english-description) | [更新日志 / Changelog](CHANGELOG.md)**
 
 </div>
 
@@ -19,6 +20,8 @@
 **CK3 大型工程修复 (CK3 Great Projects Fix)** 旨在系统性修复《十字军之王3》（Crusader Kings III）中各“大型工程”（Great Projects）系统存在的逻辑缺陷、AI 死锁、历史穿帮、作用域错误等 Bug。
 
 本项目起步于针对“万里长城”与“隋唐大运河”的专项修复，现已升级为**面向 CK3 全球所有大型工程的通用修复框架**。欢迎社区玩家与开发者共同发掘 Bug 并贡献修复。
+
+> 📜 **完整版本变动与历史记录**：请参阅 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
@@ -58,7 +61,7 @@
 2. **提交 Pull Request**：
    - Fork 本仓库并进行修复。
    - 确保修改的文本文件（`.txt` / `.yml`）保持 **UTF-8 with BOM** 编码（CK3 引擎硬性要求）。
-   - 提交 PR 并简要说明修复逻辑。
+   - 提交 PR 时，请同步在 [CHANGELOG.md](CHANGELOG.md) 顶部的 `[Unreleased]` 区块追加简短说明。
 
 ---
 
@@ -93,6 +96,8 @@
 
 Initially created for the Great Wall and Grand Canal, the project is now a **universal framework for repairing and improving all Great Projects across CK3 worldwide**. Contributions and bug reports are warmly welcome!
 
+> 📜 **Complete Version History & Changes**: See [CHANGELOG.md](CHANGELOG.md).
+
 ---
 
 ### 🏰 Currently Fixed Modules
@@ -126,6 +131,7 @@ If you encounter any logic deadlocks, progression bugs, AI quirks, or historical
 - **Submit a Pull Request**:
   - Fork the repository and create a feature branch.
   - Note: Ensure all `.txt` and `.yml` files are encoded in **UTF-8 with BOM** (mandatory for the Clausewitz engine).
+  - When submitting a PR, please append a brief note under the `[Unreleased]` section in [CHANGELOG.md](CHANGELOG.md).
   - Submit your [Pull Request](https://github.com/ShunbaoLi/ck3-great-projects-fix/pulls) for review!
 
 ---
