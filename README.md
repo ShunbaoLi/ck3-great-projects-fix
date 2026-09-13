@@ -15,32 +15,22 @@
 ---
 
 ## 📌 项目简介
-**CK3 大型工程修复 (CK3 Great Projects Fix)** 旨在系统性修复《十字军之王3》（Crusader Kings III）中各“大型工程”（Great Projects）系统存在的逻辑缺陷、AI 死锁、历史穿帮、作用域错误等 Bug。
+**CK3 大型工程修复 (CK3 Great Projects Fix)** 旨在系统性修复《十字军之王3》（Crusader Kings III）中各“大型工程”（Great Projects）系统存在的逻辑缺陷、AI 死锁、历史穿帮与作用域判定错误等 Bug。
 
-本项目起步于针对“万里长城”与“隋唐大运河”的专项修复，现已升级为**面向 CK3 全球所有大型工程的通用修复框架**。欢迎社区玩家与开发者共同发掘 Bug 并贡献修复。
+本项目起步于针对“万里长城”与“隋唐大运河”的专项修复，现已升级为**面向 CK3 全球所有大型工程的通用修复框架**。欢迎全球玩家与社区开发者共同发掘 Bug 并贡献修复。
 
 > 📜 **完整版本变动与历史记录**：请参阅 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
-## 🏰 当前已修复模块
+## 🏰 已修复与支持大型工程矩阵 (Project Status Matrix)
 
-### 模块一：万里长城修复 (`great_wall`)
-1. **AI 发起死锁 Bug (AI Deadlock on Initiation)**：
-   - 修复领内无可升级段落（1–3级）时，AI 官员仍频繁发起长城工程导致工程永久死锁且无法推进的 Bug。
-2. **段落无法资助 Bug (Barony Contribution Scope Failure)**：
-   - 修复在天朝官僚制或未分封男爵领下，全部 35 处长城段落因 `province_owner` 作用域无法解析而显示为“无法贡献”或直接在面板消失的 Bug。
-3. **主建筑师任命死锁 Bug (Master Builder Deadlock)**：
-   - 修复玩家或 AI 先行委任主建筑师时，因前置资助判定缺陷导致该选项被永久锁死的 Bug。
-4. **朝廷官员发起工程即时失效 Bug (Invalid Project Owner Scope)**：
-   - 修复中央内阁要员（如工部尚书）发起工程时，因直属封地不在边境导致工程被系统判定为无效而立刻作废的 Bug。
-
-### 模块二：隋唐大运河路线修正 (`grand_canals`)
-修复原版大运河区域错套用元明清京杭直线大运河的历史穿帮 Bug，去直取弯，恢复以东都洛阳与东京开封（汴梁）为中枢的唐宋水网：
-- **江南运河**：明州、越州、杭州、秀州、苏州。
-- **山阳渎**：常州、润州、扬州、楚州、泗州。
-- **通济渠（汴河段）**：宿州、宋州（商丘）、**汴州（开封）**、郑州、**河南府（洛阳）**（彻底剔除原版无关的徐、单、曹、濮）。
-- **永济渠（御河段）**：**怀州（河阳）、卫州（汲县）、相州（安阳）**、魏州、贝州、德州、沧州、幽州（补全洛北沁水引水渠段）。
+| 工程名称 (Project) | 游戏 ID | 涵盖地域 / 文化圈 | 核心修复特性 (Key Fixes) | 详细技术文档 (Docs) |
+| :--- | :--- | :--- | :--- | :---: |
+| **万里长城** (The Great Wall) | `great_wall` | 塞北 / 中华天朝 | 修复 AI 无脑发起死锁、35 处段落官僚制归属失效、主建筑师死锁、官员发起即刻作废 | [📖 查阅详情](docs/great_wall.md) |
+| **隋唐大运河** (The Grand Canal) | `grand_canals` | 中原 / 江淮 | 纠正明清直线京杭线穿帮，还原以洛阳、开封为中枢的唐宋真实水运漕网（23 个伯爵领） | [📖 查阅详情](docs/grand_canals.md) |
+| **圣索菲亚大教堂** (Hagia Sophia) | `hagia_sophia` | 拜占庭帝国 | *(待认领 / 欢迎社区反馈)* | [认领 Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
+| **埃及金字塔** (The Pyramids) | `pyramids` | 埃及 / 中东 | *(待认领 / 欢迎社区反馈)* | [认领 Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
 
 ---
 

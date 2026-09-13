@@ -23,24 +23,14 @@ Initially created for the Great Wall and Grand Canal in East Asia, this project 
 
 ---
 
-## 🏰 Currently Fixed Modules
+## 🏰 Project Status Matrix
 
-### Module 1: The Great Wall (`great_wall`)
-1. **AI Deadlock on Initiation**:
-   - Fixed a bug where AI officials repeatedly initiate the project even when no upgradeable wall sections (Tiers 1–3) exist in the realm, permanently deadlocking the project.
-2. **Barony Contribution Scope Failure**:
-   - Fixed a scope resolution bug where all 35 wall sections evaluate as "cannot contribute" or vanish under imperial bureaucracy / ungranted baronies due to missing `province_owner`.
-3. **Master Builder Deadlock**:
-   - Fixed a dependency bug where appointing the Master Builder before funding a section permanently locked the appointment.
-4. **Premature Project Invalidation for Imperial Officials**:
-   - Fixed a scope bug where projects initiated by court ministers were immediately aborted by the engine because their personal holding was outside the border counties.
-
-### Module 2: The Sui-Tang Grand Canal Route (`grand_canals`)
-Fixed historical routing anachronisms where the canal erroneously used the post-Yuan straight alignment instead of the curved Tang-Song network centered on Luoyang and Kaifeng:
-- **Jiangnan Canal**: Mingzhou, Yuezhou, Hangzhou, Xiuzhou, Suzhou.
-- **Shanyang Channel**: Changzhou, Runzhou, Yangzhou, Chuzhou, Sizhou.
-- **Tongji Canal (Bian River)**: Suzhou (Anhui), Songzhou, **Bianzhou (Kaifeng)**, Zhengzhou, **Henan Fu (Luoyang)** (removed irrelevant Lu-West counties).
-- **Yongji Canal (Yu River)**: **Huaizhou (Heyang), Weizhou, Xiangzhou (Anyang)**, Weizhou (Hebei), Beizhou, Dezhou, Cangzhou, Youzhou (restored northern diversion canal).
+| Project | In-Game ID | Region / Culture | Key Fixes | Documentation |
+| :--- | :--- | :--- | :--- | :---: |
+| **The Great Wall** (万里长城) | `great_wall` | Frontier China | Fixed AI initiation deadlock, 35 section scope failures under bureaucracy, Master Builder lock, invalid owner scopes | [📖 View Details](docs/great_wall.en.md) |
+| **The Grand Canal** (隋唐大运河) | `grand_canals` | Central Plain / Jiangnan | Replaced straight post-Yuan alignment with authentic Tang-Song curved network through Luoyang & Kaifeng (23 counties) | [📖 View Details](docs/grand_canals.en.md) |
+| **Hagia Sophia** (圣索菲亚大教堂) | `hagia_sophia` | Byzantine Empire | *(Planned / Open for community claim)* | [Claim Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
+| **The Pyramids** (埃及金字塔) | `pyramids` | Egypt / Middle East | *(Planned / Open for community claim)* | [Claim Issue](https://github.com/ShunbaoLi/ck3-great-projects-fix/issues) |
 
 ---
 
