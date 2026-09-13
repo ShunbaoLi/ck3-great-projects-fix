@@ -39,14 +39,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - **万里长城 (`great_wall`)**：
-  - [CN] **AI 发起死锁**：增加领内存在 1–3 级可升级段落的前置校验，彻底杜绝 AI 在关中等腹地无脑发起死锁空工程。
-  - [EN] **AI Deadlock on Initiation**: Enforced requirement for unmaxed (Tiers 1–3) wall sections in the realm, preventing AI from repeatedly launching deadlocked projects in capital areas.
+  - [CN] **AI 发起死锁**：增加领内存在 1–3 级可升级段落的前置校验，修复当长城已全部满级或无段落可修时，AI 角色仍盲目发起空工程导致工程永久死锁的问题。
+  - [EN] **AI Deadlock on Initiation**: Enforced requirement for unmaxed (Tiers 1–3) wall sections in the realm, preventing AI characters from repeatedly launching deadlocked empty projects when all sections are maxed.
   - [CN] **35 处段落归属**：为全部 35 处段落增加作用域回退机制，修复天朝官僚制与未分封男爵领下所有段落无法资助或在面板消失的 Bug。
   - [EN] **Barony Contribution Scope Failure**: Added robust 3-tier scope fallbacks for all 35 wall sections, fixing contribution unavailability under imperial bureaucracy or ungranted baronies.
   - [CN] **主建筑师死锁**：解除必须已有地块受资助的硬性前置限制，允许在任意时间委任主建筑师。
   - [EN] **Master Builder Deadlock**: Removed circular requirement for pre-funded provinces before appointing the Master Builder.
-  - [CN] **官员发起工程失效**：修正有效性校验范围为帝国顶级领主，防止朝廷要员因直辖封地不在边塞导致工程被系统直接作废。
-  - [EN] **Premature Invalidation**: Scoped validity checks to top liege realm, preventing premature invalidation when ministers hold lands outside border areas.
+  - [CN] **官员发起工程失效**：修正有效性校验范围为帝国顶级领主，防止工部尚书或中书省摄政因直属封地不在边境导致工程被系统直接作废。
+  - [EN] **Premature Invalidation**: Scoped validity checks to top liege realm, preventing premature invalidation when ministers (e.g. Minister of Works or Grand Secretariat Regents) hold demesne outside border areas.
 
 ---
 

@@ -5,7 +5,12 @@
 ---
 
 ## 📌 Background
-"Reinforce the Great Wall" (`great_wall`) is a Great Project introduced in Crusader Kings III version 1.18 and the Roads to Power / The Golden Peacock (TGP) DLC. In vanilla CK3 scripts (`common/great_projects/types/00_great_project_types.txt`), several severe logical flaws break the gameplay loop for imperial China.
+"Reinforce the Great Wall" (`great_wall`) is a Great Project introduced in Crusader Kings III version 1.18 and the Roads to Power / The Golden Peacock (TGP) DLC. In vanilla scripts (`common/great_projects/types/00_great_project_types.txt`), this project is restricted to three specific roles:
+1. **Emperor / Hegemon of China** (`has_title = title:h_china`)
+2. **Minister of Works** (`has_title = title:e_minister_of_works`)
+3. **Grand Secretariat Regent / Diarch** (`grand_secretariat` diarchy type regent)
+
+Vanilla scripts contain several severe defects in initiation conditions, contribution scopes, and validity triggers that disrupt imperial gameplay.
 
 ---
 
@@ -13,10 +18,21 @@
 
 ### 1. AI Deadlock on Initiation
 - **Vanilla Bug**:
-  The vanilla planning trigger (`can_start_planning`) only checked whether the realm is at peace and whether another Great Wall project was already being planned. It **never validated if the realm actually contains any upgradeable (Tiers 1–3) wall sections**.
-  This caused imperial ministers (e.g. the Minister of Works in Chang'an) to repeatedly launch hollow Great Wall projects with zero available sections to repair, permanently deadlocking the project.
+  Vanilla triggers (`can_start_planning` and `ai_will_do`) only checked whether the realm was at peace and had no ongoing Great Wall project. They **never validated whether the realm actually contained any unmaxed wall sections (Tiers 1–3)**.
+  When all 35 sections were already at Tier 4 or when no valid sections existed, eligible AI characters (the Emperor, Minister of Works, or Grand Secretariat Regent) repeatedly initiated the project anyway. With zero sections to fund, the project remained permanently deadlocked in planning and blocked future Great Projects.
 - **Our Fix**:
-  Added prerequisites in `can_start_planning` and `ai_will_do`, strictly requiring the top liege's realm to hold at least one wall section below tier 4. AI initiative drops to 0 if all sections are maxed or none exist.
+  Enforced a prerequisite in `can_start_planning` and `ai_will_do` requiring the top liege's realm to hold at least one unmaxed section:
+  ```pdx
+  top_liege = {
+      any_realm_county = {
+          any_county_province = {
+              has_building_or_higher = the_great_wall_01
+              NOT = { has_building = the_great_wall_04 }
+          }
+      }
+  }
+  ```
+  If all sections are completed, the trigger closes and AI weight drops to 0.
 
 ---
 
@@ -58,9 +74,9 @@
   ```pdx
   scope:owner = { any_realm_county = { ... } }
   ```
-  When central ministers initiated the project, their personal demesne was centered around the imperial capital, not the frontier. The game engine immediately judged the project invalid and aborted it.
+  When the project was initiated by the Minister of Works (`title:e_minister_of_works`) or a Grand Secretariat Regent (`diarch`), `scope:owner` evaluated to the minister. Because the minister's personal demesne was typically in the interior rather than the frontier, the engine immediately judged `is_valid = no` on the next tick and aborted the project.
 - **Our Fix**:
-  Elevated the scope check to `scope:owner.top_liege`, ensuring stability when imperial bureaucrats manage public works.
+  Elevated the scope check to `scope:owner.top_liege = { any_realm_county = { ... } }`, ensuring stability when imperial officials manage public works.
 
 ---
 
