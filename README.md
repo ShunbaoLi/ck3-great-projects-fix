@@ -23,7 +23,7 @@
 
 ---
 
-## 🏰 已修复与支持大型工程矩阵 (Project Status Matrix)
+## 🏰 已修复的大型工程 (Project Status Matrix)
 
 | 工程名称 (Project) | 游戏 ID | 涵盖地域 / 文化圈 | 核心修复特性 (Key Fixes) | 详细技术文档 (Docs) |
 | :--- | :--- | :--- | :--- | :---: |

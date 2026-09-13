@@ -23,7 +23,7 @@ Initially created for the Great Wall and Grand Canal in East Asia, this project 
 
 ---
 
-## 🏰 Project Status Matrix
+## 🏰 Fixed Great Projects (Project Status Matrix)
 
 | Project | In-Game ID | Region / Culture | Key Fixes | Documentation |
 | :--- | :--- | :--- | :--- | :---: |
