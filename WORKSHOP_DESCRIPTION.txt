@@ -1,0 +1,52 @@
+[h1]CK3 大型工程修复 | CK3 Great Projects Fix[/h1]
+
+[b]GitHub 开源仓库 / Repository[/b]: [url=https://github.com/ShunbaoLi/ck3-great-projects-fix]https://github.com/ShunbaoLi/ck3-great-projects-fix[/url]
+
+---
+
+[h2]🇨🇳 中文说明[/h2]
+
+[b]写在前面[/b]：
+我刚玩没多久，在游玩过程中发现原版长城的逻辑死锁和大运河的历史真实性 Bug，目前只发现并修复了这两个工程问题。
+由于个人游玩深度有限，非常欢迎广大玩家共同发掘更多大型工程的 Bug 并提交反馈与代码，一同完善这个 Mod。
+
+[h3]📌 当前已修复内容[/h3]
+[list]
+[*] [b]万里长城（The Great Wall）[/b]
+  - [b]修复 AI 发起死锁[/b]：领内无可升级段落（1–3级）时关闭发起条件，杜绝 AI 角色在全满级后反复发起空工程导致永久死锁。
+  - [b]修复所有 35 段长城归属判定[/b]：增加作用域多级回退，解决无地产的男爵领的长城段落在 UI 上不显示的问题。
+  - [b]解除主建筑师死锁[/b]：取消必须先资助地块的硬性限制，允许随时任命主建筑师。
+  - [b]修复朝廷官员发起失效[/b]：修正有效性校验范围为帝国顶级领主，防止工部尚书或中书省摄政发起工程时被系统判定失效作废。
+[*] [b]隋唐大运河（The Sui-Tang Grand Canal）[/b]
+  - [b]历史路线与水网中枢修正[/b]：纠正原版错用裁弯取直后的大运河，去直取弯，恢复隋唐大运河的真实走向。
+  - [b]调整四大渠段 23 个伯爵领[/b]：移出无关的鲁西四州，补齐洛阳、开封及黄河/沁水引水口等关键伯爵领。
+[/list]
+
+[h3]🤝 欢迎反馈与代码贡献[/h3]
+如果你在游戏中发现了其他大型工程的 Bug，欢迎在 GitHub 提交 Issue 或发起 Pull Request！
+开源仓库地址：[url=https://github.com/ShunbaoLi/ck3-great-projects-fix]https://github.com/ShunbaoLi/ck3-great-projects-fix[/url]
+
+---
+
+[h2]🌐 English Description[/h2]
+
+[b]A Note from the Author[/b]:
+I started playing CK3 not long ago. During my playthrough, I ran into logic deadlocks with the Great Wall and historical anachronisms with the Grand Canal. Currently, I have only identified and fixed these two issues.
+As my playtime is limited, fellow players are warmly welcomed to discover more Great Project bugs, report them, and submit code to improve this mod together.
+
+[h3]📌 Currently Fixed Modules[/h3]
+[list]
+[*] [b]The Great Wall (`great_wall`)[/b]
+  - [b]AI Initiation Deadlock[/b]: Closes initiation triggers when no upgradeable sections (Tiers 1–3) exist, preventing AI from repeatedly launching empty projects after all sections reach Tier 4.
+  - [b]Section Ownership for all 35 Wall Sections[/b]: Added multi-tier scope fallbacks, fixing the bug where wall sections in unbuilt baronies (no holding) do not show up on the UI.
+  - [b]Master Builder Deadlock[/b]: Removed the strict requirement of having funded a province first, allowing appointment of the Master Builder at any time.
+  - [b]Court Minister Project Invalidation[/b]: Corrected validity checks to the empire's top liege, preventing projects from being instantly aborted when initiated by the Minister of Works or Grand Secretariat Regent.
+[*] [b]The Sui-Tang Grand Canal (`grand_canals`)[/b]
+  - [b]Historical Route & Transport Hubs[/b]: Corrected vanilla's use of the post-straightened canal; restored the authentic curved Sui-Tang canal alignment.
+  - [b]23 Counties Across 4 Sections[/b]: Removed 4 irrelevant western Shandong counties; added key counties including Luoyang, Kaifeng, and Yellow/Qin river intake sections.
+[/list]
+
+[h3]🤝 Bug Reports & Contributions Welcome[/h3]
+If you encounter bugs in other Great Projects, welcome to open an Issue or submit a Pull Request on GitHub!
+Repository: [url=https://github.com/ShunbaoLi/ck3-great-projects-fix]https://github.com/ShunbaoLi/ck3-great-projects-fix[/url]
+
